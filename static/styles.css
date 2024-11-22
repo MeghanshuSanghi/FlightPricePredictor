@@ -1,0 +1,129 @@
+/* CSS  */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    background: #fff;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #ff4e50;
+    transform: scale(1.05);
+}
+
+.toggle-btn.active {
+    background: #f39c12;
+}
+
+.auth-form {
+    display: none;
+    flex-direction: column;
+}
+
+.auth-form.active {
+    display: flex;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff4e50;
+    outline: none;
+}
+
+.auth-btn {
+    padding: 12px;
+    background: #e74c3c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.4s;
+}
+
+.auth-btn:hover {
+    background: #ff4e50;
+    transform: translateY(-3px);
+}
+
+.switch-msg {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch-link {
+    color: #2980b9;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch-link:hover {
+    color: #f39c12;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
