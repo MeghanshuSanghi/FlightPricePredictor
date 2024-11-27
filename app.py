@@ -8,15 +8,9 @@ from flask_mail import *
 from random import *
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config.from_object("config")
 db = SQLAlchemy(app)
 app.secret_key = 'secret_key'
-app.config["MAIL_SERVER"]='smtp.gmail.com'  
-app.config["MAIL_PORT"] = 465     
-app.config["MAIL_USERNAME"] = 'mailtesting063@gmail.com'  
-app.config['MAIL_PASSWORD'] = 'weir jdwy vavc azsk'  
-app.config['MAIL_USE_TLS'] = False  
-app.config['MAIL_USE_SSL'] = True  
 model = pickle.load(open('model.pkl','rb'))
 bcrypt = Bcrypt(app)
 mail = Mail(app)
