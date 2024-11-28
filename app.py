@@ -69,16 +69,6 @@ def index():
         return redirect('/login')
     return render_template('index.html')
 
-
-@app.before_request
-def prevent_cache():
-    if 'email' not in session:
-        response = make_response()
-        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
-        response.headers['Pragma'] = 'no-cache'
-        response.headers['Expires'] = '0'
-        return response
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
